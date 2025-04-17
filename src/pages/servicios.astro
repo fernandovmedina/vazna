@@ -1,0 +1,49 @@
+---
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import Layout from "../layouts/Layout.astro";
+import { Image } from 'astro:assets';
+import SoftwareDevelopment from '../assets/software_development.png';
+import AI from '../assets/ai.png';
+import Distributor from '../assets/distributor.jpeg';
+---
+
+<Layout>
+  <main>
+    <Navbar />
+    <section class="px-20 py-10 w-full">
+        <h1 class="text-center text-4xl font-extrabold mb-3">NUESTROS SERVICIOS</h1>
+        <p class="text-center">En nuestra empresa combinamos innovación, tecnología y visión global para ofrecer soluciones integrales a nuestros clientes.</p>
+        <p class="text-center mb-5">Estas son nuestras principales áreas de servicio:</p>
+        <div class="w-full flex pt-5">
+            <div class="w-1/3 px-2 text-center">
+                <Image src={SoftwareDevelopment} alt="imagen de servicios" />
+                <h1 class="font-bold text-2xl py-2">Desarrollo de software</h1>
+                <p>Desarrollo de paginas web, tiendas en linea, aplicaciones mobiles y de escritorio a medida.</p>
+            </div>
+            <div class="w-1/3 px-2 text-center">
+                <Image src={Distributor} alt="imagen de servicios" />
+                <h1 class="font-bold text-2xl py-2">Comercializadora</h1>
+                <p>Importaciones desde china a mexico, enfocandonos en materias primas y articulos de canasta basica de consumo.</p>
+            </div>
+            <div class="w-1/3 px-2 text-center">
+                <Image src={AI} alt="imagen de servicios" />
+                <h1 class="font-bold text-2xl py-2">Automatizaciones con IA</h1>
+                <p>Desarrollo de automatizaciones con inteligencia artificial, para ahorrar tiempo de trabajo. Automatizaciones de correo, google drive, llamadas telefonicas, chats de whatsapp, entre otros.</p>
+            </div>
+        </div>
+        <div class="w-full flex pt-5">
+            <div class="w-1/3 text-center">
+                <a href="/contacto" class="bg-blue-500 px-10 py-3 rounded-lg text-white font-bold">COTIZA AQUI</a>
+            </div>
+            <div class="w-1/3 text-center">
+                <a href="/contacto" class="bg-blue-500 px-10 py-3 rounded-lg text-white font-bold">COTIZA AQUI</a>
+            </div>
+            <div class="w-1/3 text-center">
+                <a href="/contacto" class="bg-blue-500 px-10 py-3 rounded-lg text-white font-bold">COTIZA AQUI</a>
+            </div>
+        </div>
+    </section>
+    <Footer />
+  </main>
+</Layout>

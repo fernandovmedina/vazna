@@ -1,0 +1,56 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import Telephone from "../assets/telephone.png";
+import Email from "../assets/email.png";
+import SMS from "../assets/sms.png";
+import { Image } from "astro:assets";
+---
+
+<Layout>
+    <main>
+        <Navbar />
+        <section class="px-20 py-10">
+            <h1 class="text-center font-extrabold text-4xl">CONTACTANOS - COTIZA TU SERVICIO</h1>
+            <p class="py-3">En Vazna S.A de C.V ofrecemos servicios de: Desarrollo de software a medida y automatizaciones de tareas cotidianas con inteligencia artificial</p>
+            <div class="w-full flex pt-8">
+                <div class="w-1/2 text-center">
+                    <div class="w-full">
+                        <Image class="mx-auto" src={Telephone} alt="contact icon" />
+                        <h1 class="font-bold">Cotizacion via Telefonica</h1>
+                        <h1>+52 (844) 437 1227</h1>
+                    </div>
+                    <div class="py-10">
+                        <Image class="mx-auto" src={Email} alt="contact icon" />
+                        <h1 class="font-bold">Cotizacion via E-mail</h1>
+                        <h1>fernandovazquez.favm@gmail.com</h1>
+                    </div>
+                    <div>
+                        <Image class="mx-auto" src={SMS} alt="contact icon" />
+                        <h1 class="font-bold">Horario</h1>
+                        <h1>L - S: 9 am - 6 pm</h1>
+                    </div>
+                </div>
+                <div class="w-1/2">
+                    <form action="">
+                        <div class="w-full flex flex-row">
+                            <input class="border-2 border-black rounded-lg px-5 py-2 w-1/2" type="text" placeholder="Nombre">
+                            <input class="border-2 border-black rounded-lg px-5 ml-2 py-2 w-1/2" type="text" placeholder="Apellidos">
+                        </div>
+                        <div class="flex flex-col">
+                            <input class="my-3 border-2 border-black px-5 py-2 rounded-lg" type="email" placeholder="Correo electronico">
+                            <select name="servicios" id="" class="border-2 border-black rounded-lg w-full py-2 px-4">
+                                <option value="software">Software a medida</option>
+                                <option value="ia">Automatizacion con IA</option>
+                            </select>
+                        <textarea class="border-2 border-black py-2 rounded-lg px-4 my-2" name="especificacion" placeholder="Favor de especificar" id="especificacion"></textarea>
+                        </div>
+                        <button class="bg-blue-500 text-white font-bold rounded-lg w-full py-3" type="submit">ENVIAR</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <Footer />
+    </main>
+</Layout>
